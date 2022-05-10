@@ -263,7 +263,9 @@ scores.index = dataset_names
 
 for data_name in datasets2:
 
-    data = pd.read_csv(data_name)
+
+    full_name = "datasets/" + data_name
+    data = pd.read_csv(full_name)
     label_model = LabelEncoder()
 
     y = LabelEncoder().fit_transform(data.iloc[:, -1])
